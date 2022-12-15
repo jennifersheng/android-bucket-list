@@ -1,0 +1,58 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "aa3f88b70559a13f1037d656fa57e484",
+    "entities": [
+      {
+        "tableName": "bucketList_table",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`createDate` INTEGER, `itemText` TEXT NOT NULL, `dueDate` INTEGER, `complete` INTEGER NOT NULL, `completeDate` INTEGER, PRIMARY KEY(`createDate`))",
+        "fields": [
+          {
+            "fieldPath": "createDate",
+            "columnName": "createDate",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "itemText",
+            "columnName": "itemText",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dueDate",
+            "columnName": "dueDate",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "complete",
+            "columnName": "complete",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "completeDate",
+            "columnName": "completeDate",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "createDate"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'aa3f88b70559a13f1037d656fa57e484')"
+    ]
+  }
+}
