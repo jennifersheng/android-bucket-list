@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Resources:-->
+<!--https://johncodeos.com/how-to-use-room-in-android-using-kotlin/-->
+<!--https://github.com/johncodeos-blog/RoomExample/-->
+<resources>
+    <color name="ic_launcher_background">#BC214B</color>
+</resources>

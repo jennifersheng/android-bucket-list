@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Resources:-->
+<!--https://johncodeos.com/how-to-use-room-in-android-using-kotlin/-->
+<!--https://github.com/johncodeos-blog/RoomExample/-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/add_bucket_list_item_menu_item"
+        android:icon="@drawable/ic_add"
+        android:title="@string/add_item_button"
+        app:showAsAction="always" />
+</menu>

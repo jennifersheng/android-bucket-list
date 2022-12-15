@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Resources:-->
+<!--https://johncodeos.com/how-to-use-room-in-android-using-kotlin/-->
+<!--https://github.com/johncodeos-blog/RoomExample/-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary">
+
+    <ImageView
+        android:id="@+id/bucket_list_item_delete"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="7dp"
+        android:background="@drawable/bucket_list_item_bg_delete"
+        android:elevation="1dp"
+        android:src="@drawable/ic_delete"
+        app:tint="@color/colorPrimaryDark" />
+
+<!--    Reference:-->
+<!--    https://www.digitalocean.com/community/tutorials/android-recyclerview-android-cardview-example-tutorial-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bucket_list_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="7dp"
+        app:cardBackgroundColor="@color/colorPrimaryDark"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="0dp"
+        app:cardMaxElevation="0dp"
+        app:cardPreventCornerOverlap="false"
+        >
+
+        <CheckBox
+            android:id="@+id/bucket_list_item_checkbox"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/white"
+            android:padding="12dp"
+            android:layout_marginStart="5dp"
+            tools:ignore="RtlSymmetry"
+            android:focusable="false"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/bucket_list_item_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="9dp"
+                android:paddingStart="40dp"
+                android:paddingEnd="20dp"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="RtlSymmetry" />
+
+            <!--Reference:-->
+            <!--https://www.educative.io/answers/what-is-android-visibility-->
+            <LinearLayout
+                android:id="@+id/bucket_list_item_due_line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="40dp"
+                android:visibility="visible"
+                tools:ignore="RtlSymmetry">
+
+                <TextView
+                    android:id="@+id/bucket_list_item_due_date_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/due_date_title"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    tools:ignore="RtlSymmetry" />
+
+                <TextView
+                    android:id="@+id/bucket_list_item_due_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="10dp"
+                    android:paddingStart="10dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    tools:ignore="RtlSymmetry" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/bucket_list_item_complete_line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="40dp"
+                android:visibility="gone"
+                tools:ignore="RtlSymmetry">
+
+                <TextView
+                    android:id="@+id/bucket_list_item_complete_date_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="10dp"
+                    android:text="@string/complete_date_title"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    tools:ignore="RtlSymmetry" />
+
+                <TextView
+                    android:id="@+id/bucket_list_item_complete_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="10dp"
+                    android:paddingStart="10dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    tools:ignore="RtlSymmetry" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

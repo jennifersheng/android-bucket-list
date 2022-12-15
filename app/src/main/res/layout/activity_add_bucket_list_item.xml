@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Resources:-->
+<!--https://johncodeos.com/how-to-use-room-in-android-using-kotlin/-->
+<!--https://github.com/johncodeos-blog/RoomExample/-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/add_bucket_list_item_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddBucketListItemActivity">
+
+    <LinearLayout
+        android:id="@+id/add_bucket_list_item_window_bg"
+        android:layout_width="383dp"
+        android:layout_height="625dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bucket_list_item_bg_layout"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/add_bucket_list_item_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:orientation="horizontal"
+            android:paddingStart="20dp"
+            tools:ignore="RtlSymmetry">
+
+            <ImageView
+                android:id="@+id/add_bucket_list_item_back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="32dp"
+                android:src="@drawable/ic_back_arrow" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/add_bucket_list_item_big_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingStart="35dp"
+                android:paddingTop="30dp"
+                android:paddingEnd="35dp"
+                android:paddingBottom="25dp"
+                android:text="@string/add_item_title"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/add_bucket_list_item_description_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="130dp"
+            android:layout_marginRight="130dp"
+            android:gravity="center"
+            android:paddingTop="30dp"
+            android:paddingBottom="20dp"
+            android:text="@string/description_title"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/add_bucket_list_item_title_bg"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/bucket_list_item_text_bg_layout"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp">
+
+            <!--Reference:-->
+            <!--https://stackoverflow.com/questions/1919742/how-do-i-make-an-android-editview-done-button-and-hide-the-keyboard-when-click-->
+            <EditText
+                android:id="@+id/add_bucket_list_item_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="8dp"
+                android:background="@android:color/transparent"
+                android:gravity="top"
+                android:hint="@string/textbox_hint"
+                android:imeOptions="actionDone"
+                android:inputType="textCapSentences|textAutoCorrect"
+                android:textColor="@color/colorAccent"
+                android:textCursorDrawable="@drawable/bucket_list_item_text_cursor_color"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/add_bucket_list_item_due_date_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="140dp"
+            android:layout_marginRight="140dp"
+            android:gravity="center"
+            android:paddingTop="30dp"
+            android:text="@string/due_date_title"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!--    Reference-->
+        <!--    https://www.geeksforgeeks.org/datepicker-in-kotlin/-->
+        <DatePicker
+            android:id="@+id/add_bucket_list_item_due_date"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:calendarTextColor="@color/colorAccent"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner"
+            android:gravity="center" />
+
+        <!--        <androidx.appcompat.widget.AppCompatTextView-->
+        <!--            android:id="@+id/add_bucket_list_item_complete_date_title"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:gravity="center"-->
+        <!--            android:paddingTop="10dp"-->
+        <!--            android:text="@string/complete_date_title"-->
+        <!--            android:textAlignment="center"-->
+        <!--            android:textColor="@android:color/white"-->
+        <!--            android:textSize="20sp"-->
+        <!--            android:textStyle="bold" />-->
+
+        <!--        <androidx.appcompat.widget.AppCompatTextView-->
+        <!--            android:id="@+id/add_bucket_list_item_complete_status"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:gravity="center"-->
+        <!--            android:paddingTop="15dp"-->
+        <!--            android:paddingBottom="25dp"-->
+        <!--            android:text="@string/no_complete_date"-->
+        <!--            android:textAlignment="center"-->
+        <!--            android:textColor="@color/colorAccent"-->
+        <!--            android:textSize="16sp"-->
+        <!--            android:textStyle="bold" />-->
+
+        <Button
+            android:id="@+id/add_bucket_list_item_button"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/bucket_list_item_button_bg_layout"
+            android:text="@string/add_item_button"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </LinearLayout>
+
+</RelativeLayout>
